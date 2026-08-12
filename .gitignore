@@ -1,0 +1,5 @@
+.DS_Store
+
+# Local agent settings. The shared .claude/settings.json, if one is ever added,
+# stays tracked; this is the per-machine override.
+.claude/settings.local.json

@@ -1,0 +1,24 @@
+
+# --- research-runbook --------------------------------------------------------------
+
+# Persistent memory. MUST stay untracked: the KEEP/DISCARD workflow reverts failed
+# experiments with `git restore`, and a tracked log would be reverted along with the
+# code — deleting the record of why the code was thrown away.
+# Verify with: git check-ignore -v hypothesis_log.md
+hypothesis_log.md
+
+# Experiment logs
+/tmp/*.log
+*.log
+
+# Checkpoints and weights — too large, regenerable
+checkpoints/
+runs/
+*.pt
+*.safetensors
+
+# Papers and large reference material kept local; distilled notes are tracked instead
+context/*.pdf
+ai-context/*.pdf
+
+.DS_Store
